@@ -1,0 +1,79 @@
+Number,Card Name,Suit,Color,Value
+1,The Fool,major arcana,wild,0
+2,The Magician,major arcana,wild,1
+3,The High Priestess,major arcana,wild,2
+4,The Empress,major arcana,wild,3
+5,The Emperor,major arcana,wild,4
+6,The Hierophant,major arcana,wild,5
+7,The Lovers,major arcana,wild,6
+8,The Chariot,major arcana,wild,7
+9,Strength,major arcana,wild,8
+10,The Hermit,major arcana,wild,9
+11,Wheel of Fortune,major arcana,wild,10
+12,Justice,major arcana,wild,11
+13,The Hanged Man,major arcana,wild,12
+14,Death,major arcana,wild,13
+15,Temperance,major arcana,wild,14
+16,The Devil,major arcana,wild,15
+17,The Tower,major arcana,wild,16
+18,The Star,major arcana,wild,17
+19,The Moon,major arcana,wild,18
+20,The Sun,major arcana,wild,19
+21,Judgment,major arcana,wild,20
+22,The World,major arcana,wild,21
+23,Ace of Wands,wands,black,1
+24,Two of Wands,wands,black,2
+25,Three of Wands,wands,black,3
+26,Four of Wands,wands,black,4
+27,Five of Wands,wands,black,5
+28,Six of Wands,wands,black,6
+29,Seven of Wands,wands,black,7
+30,Eight of Wands,wands,black,8
+31,Nine of Wands,wands,black,9
+32,Ten of Wands,wands,black,10
+33,Page of Wands,wands,black,11
+34,Knight of Wands,wands,black,12
+35,Queen of Wands,wands,black,13
+36,King of Wands,wands,black,14
+37,Ace of Pentacles,pentacles,red,1
+38,Two of Pentacles,pentacles,red,2
+39,Three of Pentacles,pentacles,red,3
+40,Four of Pentacles,pentacles,red,4
+41,Five of Pentacles,pentacles,red,5
+42,Six of Pentacles,pentacles,red,6
+43,Seven of Pentacles,pentacles,red,7
+44,Eight of Pentacles,pentacles,red,8
+45,Nine of Pentacles,pentacles,red,9
+46,Ten of Pentacles,pentacles,red,10
+47,Page of Pentacles,pentacles,red,11
+48,Knight of Pentacles,pentacles,red,12
+49,Queen of Pentacles,pentacles,red,13
+50,King of Pentacles,pentacles,red,14
+51,Ace of Swords,swords,black,1
+52,Two of Swords,swords,black,2
+53,Three of Swords,swords,black,3
+54,Four of Swords,swords,black,4
+55,Five of Swords,swords,black,5
+56,Six of Swords,swords,black,6
+57,Seven of Swords,swords,black,7
+58,Eight of Swords,swords,black,8
+59,Nine of Swords,swords,black,9
+60,Ten of Swords,swords,black,10
+61,Page of Swords,swords,black,11
+62,Knight of Swords,swords,black,12
+63,Queen of Swords,swords,black,13
+64,King of Swords,swords,black,14
+65,Ace of Cups,cups,red,1
+66,Two of Cups,cups,red,2
+67,Three of Cups,cups,red,3
+68,Four of Cups,cups,red,4
+69,Five of Cups,cups,red,5
+70,Six of Cups,cups,red,6
+71,Seven of Cups,cups,red,7
+72,Eight of Cups,cups,red,8
+73,Nine of Cups,cups,red,9
+74,Ten of Cups,cups,red,10
+75,Page of Cups,cups,red,11
+76,Knight of Cups,cups,red,12
+77,Queen of Cups,cups,red,13
+78,King of Cups,cups,red,14
