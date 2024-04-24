@@ -6,6 +6,9 @@ contains a list of cards and their suits
 ### Three card spread 
 draws 3 cards 'randomly' from the deck
 
+### Three card spread display
+working on an interface for displaying the cards and allowing the user to click on them
+
 ### images 
 contains 78 images of tarot cards plus 1 image of the back of the deck
 
