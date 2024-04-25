@@ -36,10 +36,18 @@ card3 = card_file[random.randint(0,75)]
 card_file.remove(card3)
 
 # load images of each card and the back of the card into pygame
+# randomly flips some upsidedown
 back = pygame.image.load('processed/back.jpg')
+flip1 = random.choice([True,False])
 image1 = pygame.image.load('processed/'+card1)
+image1 = pygame.transform.flip(image1, flip1, flip1)
+flip2 = random.choice([True,False])
 image2 = pygame.image.load('processed/'+card2)
+image2 = pygame.transform.flip(image2, flip2, flip2)
+flip3 = random.choice([True,False])
 image3 = pygame.image.load('processed/'+card3)
+image3 = pygame.transform.flip(image3, flip3, flip3)
+
 
 # load font and messages into pygame
 black = (0,0,0)
