@@ -1,13 +1,16 @@
 # Project Description
 
-### Tarot deck CSV 
+### tarot deck CSV 
 contains a list of cards and their suits, file names, values, etc.
 
-### Three card spread 
+### three card spread 
 draws 3 cards 'randomly' from the deck
 
-### Three card spread display
+### three card spread display
 Contains an interface for displaying the cards and allowing the user to click on them
+
+### font
+Used in the card spread display
 
 ### processed 
 contains 78 images of tarot cards plus 1 image of the back of the deck which were renamed and resized for use with pygames
