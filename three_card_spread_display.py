@@ -48,7 +48,6 @@ flip3 = random.choice([True,False])
 image3 = pygame.image.load('processed/'+card3)
 image3 = pygame.transform.flip(image3, flip3, flip3)
 
-
 # load font and messages into pygame
 black = (0,0,0)
 white = (255,255,255)
@@ -59,7 +58,7 @@ future = font.render('Future', True, white, black)
 click_here = font.render('click to flip', True, white, black)
 clicked = font.render('click to flip', True, black, black)
 
-# Initialize a window or screen for display with caption and clock
+# Initialize a window or screen for display with caption
 surface = pygame.display.set_mode((800, 433))
 pygame.display.set_caption('Tarot Game')
 
