@@ -110,7 +110,13 @@ def game_still_going():
         can_discard(t2) == False and 
         can_discard(t3) == False and 
         can_discard(t4) == False and 
-        can_discard(t5) == False):
+        can_discard(t5) == False and
+        len(t1) > 0 and
+        len(t2) > 0 and
+        len(t3) > 0 and
+        len(t4) > 0 and
+        len(t5) > 0):
+        #print('card piles \n', t1, '\n', t2, '\n', t3, '\n', t4, '\n', t5)
         return True
     else:
         return False
@@ -127,8 +133,6 @@ def game_won():
         return True
     else:
         return False
-
-
 
 # can_discard(t1), can_discard(t2), can_discard(t3), can_discard(t4), can_discard(t5)
 # print(t1, '\n', t2, '\n', t3, '\n', t4, '\n', t5)
