@@ -1,0 +1,79 @@
+Number,Card Name,Suit,Color,Value,Image File,Pile
+1,The Fool,major arcana,wild,0,c01.jpg,draw
+2,The Magician,major arcana,wild,1,c02.jpg,draw
+3,The High Priestess,major arcana,wild,2,c03.jpg,draw
+4,The Empress,major arcana,wild,3,c04.jpg,draw
+5,The Emperor,major arcana,wild,4,c05.jpg,draw
+6,The Hierophant,major arcana,wild,5,c06.jpg,draw
+7,The Lovers,major arcana,wild,6,c07.jpg,draw
+8,The Chariot,major arcana,wild,7,c08.jpg,draw
+9,Strength,major arcana,wild,8,c09.jpg,draw
+10,The Hermit,major arcana,wild,9,c10.jpg,draw
+11,Wheel of Fortune,major arcana,wild,10,c11.jpg,draw
+12,Justice,major arcana,wild,11,c12.jpg,draw
+13,The Hanged Man,major arcana,wild,12,c13.jpg,draw
+14,Death,major arcana,wild,13,c14.jpg,draw
+15,Temperance,major arcana,wild,14,c15.jpg,draw
+16,The Devil,major arcana,wild,15,c16.jpg,draw
+17,The Tower,major arcana,wild,16,c17.jpg,draw
+18,The Star,major arcana,wild,17,c18.jpg,draw
+19,The Moon,major arcana,wild,18,c19.jpg,draw
+20,The Sun,major arcana,wild,19,c20.jpg,draw
+21,Judgment,major arcana,wild,20,c21.jpg,draw
+22,The World,major arcana,wild,21,c22.jpg,draw
+23,Ace of Wands,wands,black,1,c23.jpg,draw
+24,Two of Wands,wands,black,2,c24.jpg,draw
+25,Three of Wands,wands,black,3,c25.jpg,draw
+26,Four of Wands,wands,black,4,c26.jpg,draw
+27,Five of Wands,wands,black,5,c27.jpg,draw
+28,Six of Wands,wands,black,6,c28.jpg,draw
+29,Seven of Wands,wands,black,7,c29.jpg,draw
+30,Eight of Wands,wands,black,8,c30.jpg,draw
+31,Nine of Wands,wands,black,9,c31.jpg,draw
+32,Ten of Wands,wands,black,10,c32.jpg,draw
+33,Page of Wands,wands,black,11,c33.jpg,draw
+34,Knight of Wands,wands,black,12,c34.jpg,draw
+35,Queen of Wands,wands,black,13,c35.jpg,draw
+36,King of Wands,wands,black,14,c36.jpg,draw
+37,Ace of Cups,cups,red,1,c37.jpg,draw
+38,Two of Cups,cups,red,2,c38.jpg,draw
+39,Three of Cups,cups,red,3,c39.jpg,draw
+40,Four of Cups,cups,red,4,c40.jpg,draw
+41,Five of Cups,cups,red,5,c41.jpg,draw
+42,Six of Cups,cups,red,6,c42.jpg,draw
+43,Seven of Cups,cups,red,7,c43.jpg,draw
+44,Eight of Cups,cups,red,8,c44.jpg,draw
+45,Nine of Cups,cups,red,9,c45.jpg,draw
+46,Ten of Cups,cups,red,10,c46.jpg,draw
+47,Page of Cups,cups,red,11,c47.jpg,draw
+48,Knight of Cups,cups,red,12,c48.jpg,draw
+49,Queen of Cups,cups,red,13,c49.jpg,draw
+50,King of Cups,cups,red,14,c50.jpg,draw
+51,Ace of Swords,swords,black,1,c51.jpg,draw
+52,Two of Swords,swords,black,2,c52.jpg,draw
+53,Three of Swords,swords,black,3,c53.jpg,draw
+54,Four of Swords,swords,black,4,c54.jpg,draw
+55,Five of Swords,swords,black,5,c55.jpg,draw
+56,Six of Swords,swords,black,6,c56.jpg,draw
+57,Seven of Swords,swords,black,7,c57.jpg,draw
+58,Eight of Swords,swords,black,8,c58.jpg,draw
+59,Nine of Swords,swords,black,9,c59.jpg,draw
+60,Ten of Swords,swords,black,10,c60.jpg,draw
+61,Page of Swords,swords,black,11,c61.jpg,draw
+62,Knight of Swords,swords,black,12,c62.jpg,draw
+63,Queen of Swords,swords,black,13,c63.jpg,draw
+64,King of Swords,swords,black,14,c64.jpg,draw
+65,Ace of Pentacles,pentacles,red,1,c65.jpg,draw
+66,Two of Pentacles,pentacles,red,2,c66.jpg,draw
+67,Three of Pentacles,pentacles,red,3,c67.jpg,draw
+68,Four of Pentacles,pentacles,red,4,c68.jpg,draw
+69,Five of Pentacles,pentacles,red,5,c69.jpg,draw
+70,Six of Pentacles,pentacles,red,6,c70.jpg,draw
+71,Seven of Pentacles,pentacles,red,7,c71.jpg,draw
+72,Eight of Pentacles,pentacles,red,8,c72.jpg,draw
+73,Nine of Pentacles,pentacles,red,9,c73.jpg,draw
+74,Ten of Pentacles,pentacles,red,10,c74.jpg,draw
+75,Page of Pentacles,pentacles,red,11,c75.jpg,draw
+76,Knight of Pentacles,pentacles,red,12,c76.jpg,draw
+77,Queen of Pentacles,pentacles,red,13,c77.jpg,draw
+78,King of Pentacles,pentacles,red,14,c78.jpg,draw
