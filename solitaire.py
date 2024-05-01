@@ -14,56 +14,42 @@ deck = {}
 card_name_list = []
 for card in csv_reader:
     if line_count == 0:
-        print(f'Column names are: {", ".join(card)}')
+        # print(f'Column names are: {", ".join(card)}')
         line_count += 1
     deck[card['Card Name']] = card
     card_name_list.append(card['Card Name'])
     line_count += 1
 
-'''
-# each card has a integer value, suit, and pile
-card = 'The Fool'
-card = 'King of Cups'
-# card value
-int(deck[card]['Value'])
-# card suit
-deck[card]['Suit']
-# card pile
-deck[card]['Pile']
-# card number / pile position
-deck[card]['Number']
-'''
-
-# place the cards into the draw pile and shuffle them
-draw = card_name_list
-random.shuffle(draw)
-# the top card is draw[0]
 # initialize empty tableau piles and empty discard pile
+draw = []
 t1 = []
 t2 = []
 t3 = []
 t4 = []
 t5 = []
-t6 = []
 discard = []
 
-# function to deal 6 cards from the draw pile to the top of each tableau pile. gives an error if the draw runs out of cards.
+# place a full deck of cards into the draw pile and shuffle them
+draw = card_name_list
+random.shuffle(draw)
+
+# function to deal 5 cards from the draw pile to the top of each tableau pile. gives an error if the draw runs out of cards.
 def deal():
     '''Deals cards from top of draw pile to top of each tableau pile. No arguments, no return.'''
-    t1.insert(0, draw.pop(0))
-    t2.insert(0, draw.pop(0))
-    t3.insert(0, draw.pop(0))
-    t4.insert(0, draw.pop(0))
-    t5.insert(0, draw.pop(0))
-    t6.insert(0, draw.pop(0))
+    for t in [t1, t2, t3, t4, t5]:
+        if len(draw) > 0:
+            t.insert(0, draw.pop(0))
 
 # function to move card to discard pile
-def move_to_discard(card_pile):
+def mv_discard(card_pile):
     '''Moves top card to discard pile. Argument is card pile.'''
-    discard.insert(0, card_pile.pop(0))
+    if can_discard(card_pile) == True:
+        discard.insert(0, card_pile.pop(0))
+    else:
+        print('error')
 
-# function to check if a tableau is empty and move a card there, otherwise return something
-def move_to_empty(card_pile):
+# function to check if a tableau is empty and move a card there
+def mv_empty(card_pile):
     '''Moves top card to first empty pile'''
     if len(t1) == 0:
         t1.insert(0, card_pile.pop(0))
@@ -75,11 +61,75 @@ def move_to_empty(card_pile):
         t4.insert(0, card_pile.pop(0))
     elif len(t5) == 0:
         t5.insert(0, card_pile.pop(0))
-    elif len(t6) == 0:
-        t6.insert(0, card_pile.pop(0))
 
-# find points, 78 is a win
-def score():
-    '''calculates score'''
-    len(discard)
-        
+# function to check if there is an empty tableau pile
+def any_empty():
+    if (len(t1) == 0 or
+    len(t2) == 0 or
+    len(t3) == 0 or
+    len(t4) == 0 or
+    len(t5) == 0):
+        return True
+    else:
+        return False
+
+# compare card values to see if a card can be moved to the discard pile. returns False if card pile is empty. 
+def can_discard(card_pile):
+    ''' argument is a card pile. checks each tableau pile to see if they have a card of the same suit and greater value. 
+    indicates if a card can be discarded. returns True if it can, False if it can't.  '''
+    if len(card_pile) == 0:
+        return False
+    elif (len(t1) > 0 and
+        deck[card_pile[0]]['Suit'] == deck[t1[0]]['Suit'] and 
+        int(deck[card_pile[0]]['Value']) < int(deck[t1[0]]['Value'])):
+        return True
+    elif (len(t2) > 0 and
+        deck[card_pile[0]]['Suit'] == deck[t2[0]]['Suit'] and
+        int(deck[card_pile[0]]['Value']) < int(deck[t2[0]]['Value'])):
+        return True
+    elif (len(t3) > 0 and
+        deck[card_pile[0]]['Suit'] == deck[t3[0]]['Suit'] and
+        int(deck[card_pile[0]]['Value']) < int(deck[t3[0]]['Value'])):
+        return True
+    elif (len(t4) > 0 and
+        deck[card_pile[0]]['Suit'] == deck[t4[0]]['Suit'] and
+        int(deck[card_pile[0]]['Value']) < int(deck[t4[0]]['Value'])):
+        return True
+    elif (len(t5) > 0 and
+        deck[card_pile[0]]['Suit'] == deck[t5[0]]['Suit'] and
+        int(deck[card_pile[0]]['Value']) < int(deck[t5[0]]['Value'])):
+        return True
+    else:
+        return False
+
+# The game ends in a loss when the draw pile is empty and none of the 5 top cards can be moved to the discard pile
+def game_still_going():
+    '''checks if the game is lost. returns True if so. error if no cards in tableau pile. '''
+    if (len(draw) == 0 and 
+        can_discard(t1) == False and 
+        can_discard(t2) == False and 
+        can_discard(t3) == False and 
+        can_discard(t4) == False and 
+        can_discard(t5) == False):
+        return True
+    else:
+        return False
+
+# calculate the score
+def get_score():
+    '''calculates score, no args, returns integer score'''
+    return len(discard)
+
+# The game is won when all the cards have been moved into the discard pile (except 1 highest card in each suit) 
+def game_won():
+    '''checks if the game is won. returns True if so, False if not.'''
+    if get_score() == 73:
+        return True
+    else:
+        return False
+
+
+
+# can_discard(t1), can_discard(t2), can_discard(t3), can_discard(t4), can_discard(t5)
+# print(t1, '\n', t2, '\n', t3, '\n', t4, '\n', t5)
+
