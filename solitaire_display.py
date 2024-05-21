@@ -12,7 +12,9 @@ black = (0,0,0)
 white = (255,255,255)
 
 # Draw rectangles for each empty card pile
+# card image dimensions
 width_height = (200, 333)
+# card pile locations
 xy_draw = (50, 433)
 draw_rec = pygame.Rect(xy_draw, width_height)
 xy_t1 = (50, 50)
@@ -46,7 +48,7 @@ surface.blit(txt_score, (860, 555))
 txt_discarded = font.render('Cards Discarded  ->', True, white, black)
 surface.blit(txt_discarded, (800, 595))
 
-# start depths for each tableau card piles
+# display the depths of each tableau card piles, written above each pile
 font2 = pygame.font.Font('font/FiraSans-Bold.otf', 18)
 d1_xy = (146, 15)
 d2_xy = (396, 15)
@@ -134,7 +136,7 @@ def display_update():
 
     # udpate display for troubleshooting
     if game_won():
-        msg = 'You won'
+        msg = 'Congratulations, you won!!'
     if game_still_going():
         msg = f'You lost but you got {score} points!'
     msg_txt = font.render(msg, True, white, black)
