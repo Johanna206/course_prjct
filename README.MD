@@ -23,3 +23,6 @@ Contains the logic for a game similar to "Aces Up" solitaire. The goal of the ga
 
 ### solitaire display py
 Contains the display for the game. According to wikipedia, "aces up" is only winnable 1/43 times so I also added a 'score' corresponding to the number of cards discarded. Even if you do not win, you can try for a high score. 
+
+### matching display
+Contains a matching game (aka memory) where you click to reveal cards and try to match up the pairs of cards in the fewest flips. The fewest number of flips possible is 10 (one for each card). 
