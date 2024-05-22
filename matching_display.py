@@ -1,4 +1,5 @@
-""" Memory/Matching game"""
+""" Memory/Matching game
+made with python3 """
 
 # used for reading csv file
 import csv
@@ -64,7 +65,7 @@ for l in locations:
 pygame.display.flip()
 
 
-# create a class
+# create a class so that each of the 10 cards can be represented by an object
 class Card:
     flips = 0
     def __init__(self, name, location):
@@ -80,7 +81,7 @@ class Card:
 
     def define_rect(self):
         return pygame.Rect(self.location, self.dimensions)
-    
+
     def draw_face(self):
         if self.match == False:
             f = self.file
@@ -110,8 +111,6 @@ cards = []
 for i in range(10):
     cards.append(Card(draw[i], locations[i]))
 
-previous_card = None
-
 # Game loop
 running = True
 while running:
@@ -120,32 +119,38 @@ while running:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
             x, y = pygame.mouse.get_pos()
+            # count the number of flipped cards (no including the matched cards)
             cards_up = sum(bool(card.faceUp) for card in cards)
             for card in cards:
+                # rec is the clickable area of the card
                 rec = card.define_rect()
+                # if two cards are face up then they are not a match and a click anywhere flips them back
+                if cards_up == 2:
+                    previous_card = None
+                    for card in cards:
+                        card.draw_back()
+                # if no cards are face up then the card is flipped and it becomes the previous card
                 if rec.collidepoint(x, y) and card.faceUp == False and cards_up == 0:
                     card.draw_face()
                     previous_card = card
-                    break
+                # if one card is face up then there could be a match
                 if rec.collidepoint(x, y) and card.faceUp == False and cards_up == 1:
                     card.draw_face()
+                    # if there is a match, the card object info is updated
                     if previous_card.name == card.name:
                         card.match = True
                         previous_card.match = True
+                        card.faceUp = False
+                        previous_card.faceUp = False
+                        # update number of matches found
                         matches_found = sum(bool(card.match) for card in cards)
-                        #print('Matches found: ', matches_found)
-                        #print('Flips: ', Card.flips)
+                        # it takes 10 matches to win 
                         if matches_found == 10:
-                            #print("You won in ", Card.flips, " flips")
                             msg = f'You won in {Card.flips} flips!'
                             msg_txt = font.render(msg, True, black)
                             surface.blit(msg_txt, (510, 385))
                             pygame.display.flip()
-                        break
-                    else:
-                        previous_card = None
-                        break
-                if rec.collidepoint(x, y) and cards_up == 2:
-                    for card in cards:
-                        card.draw_back()
-                    break
+                            
+
+
+                    
